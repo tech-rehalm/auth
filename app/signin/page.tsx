@@ -24,7 +24,7 @@ export default function Page() {
           className='input input-success bg-gray-800' 
         />
         <button className='btn btn-success my-2'>Register</button>
-        <Link href="/register" className='text-sm font-extralight'>Doesn&copy; have an account? <span className="link link-success">Register</span></Link>
+        <Link href="/register" className='text-sm font-extralight'>Doesn&apos; have an account? <span className="link link-success">Register</span></Link>
       </form>
     </div>
   );
