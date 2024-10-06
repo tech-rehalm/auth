@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
 import Menu from './Menu'
-import { SearchBox } from './SearchBox'
 
 const Header = () => {
   return (
@@ -25,14 +24,11 @@ const Header = () => {
               </svg>
             </label>
             <Link href="/" className="btn btn-ghost text-lg">
-              Next Amazona V2
+              Auth System
             </Link>
           </div>
 
           <Menu />
-        </div>
-        <div className="bg-base-300 block md:hidden text-center pb-3">
-          <SearchBox />
         </div>
       </nav>
     </header>

@@ -42,7 +42,7 @@ const Form = () => {
     })
   }
   return (
-    <div className="max-w-sm  mx-auto card bg-base-300 my-4">
+    <div className="max-w-sm  mx-auto card bg-gradient-to-br from border border-gray-900 from-gray-900 my-4">
       <div className="card-body">
         <h1 className="card-title">Sign in</h1>
         {params.get('error') && (
@@ -70,7 +70,7 @@ const Form = () => {
                   message: 'Email is invalid',
                 },
               })}
-              className="input input-bordered w-full max-w-sm"
+              className="input input-bordered input-success w-full max-w-sm"
             />
             {errors.email?.message && (
               <div className="text-error">{errors.email.message}</div>
@@ -86,7 +86,7 @@ const Form = () => {
               {...register('password', {
                 required: 'Password is required',
               })}
-              className="input input-bordered w-full max-w-sm"
+              className="input input-bordered input-success w-full max-w-sm"
             />
             {errors.password?.message && (
               <div className="text-error">{errors.password.message}</div>
@@ -96,7 +96,7 @@ const Form = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="btn btn-primary w-full"
+              className="btn btn-success w-full"
             >
               {isSubmitting && (
                 <span className="loading loading-spinner"></span>
@@ -108,7 +108,7 @@ const Form = () => {
         <div>
           Need an account?{' '}
           <Link className="link" href={`/register?callbackUrl=${callbackUrl}`}>
-            Register
+            <span className="text-success"> Register</span>
           </Link>
         </div>
       </div>

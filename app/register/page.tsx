@@ -15,6 +15,10 @@ export default function page() {
     const handleSubmit  =async(e:any)=>{
         e.preventDefault()
         try {
+            if(password !== confrimPassword){
+                toast.error("Passwords do not match")
+                return
+            }
              const response = await fetch("/api/users",{
             method:"POST",
             headers:{
