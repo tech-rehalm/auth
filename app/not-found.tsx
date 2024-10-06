@@ -1,36 +1,22 @@
 import Link from 'next/link'
-import { ShieldCheck, UserPlus, LogIn, Zap } from 'lucide-react'
+import { Home, AlertTriangle } from 'lucide-react'
 
-export default function Component() {
+export default function NotFound() {
   return (
-    <div className="min-h-screen bg-base-200">
+    <div className="min-h-screen bg-base-200 flex flex-col">
 
-      <div className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12 text-success">Auth By Makhosi Ncube</h2>
-        <div className="w-full text-center mb-3">
-           <button className="btn btn-success m-auto"><a href="/register">Get started</a></button>
-        </div>
-       
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="flex-grow flex items-center justify-center px-4">
+        <div className="max-w-md w-full">
           <div className="card bg-base-100 shadow-xl">
             <div className="card-body items-center text-center">
-              <ShieldCheck className="w-12 h-12 text-success mb-4" />
-              <h3 className="card-title text-success">Unbreakable Security</h3>
-              <p>Our advanced encryption keeps your data safe and secure at all times.</p>
-            </div>
-          </div>
-          <div className="card bg-base-100 shadow-xl">
-            <div className="card-body items-center text-center">
-              <Zap className="w-12 h-12 text-success mb-4" />
-              <h3 className="card-title text-success">Lightning Fast</h3>
-              <p>Experience swift logins and seamless authentication processes.</p>
-            </div>
-          </div>
-          <div className="card bg-base-100 shadow-xl">
-            <div className="card-body items-center text-center">
-              <UserPlus className="w-12 h-12 text-success mb-4" />
-              <h3 className="card-title text-success">Easy Onboarding</h3>
-              <p>Get started in minutes with our simple and intuitive registration process.</p>
+              <AlertTriangle className="w-24 h-24 text-success mb-4" />
+              <h1 className="card-title text-4xl font-bold text-success mb-2">404</h1>
+              <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
+              <p className="mb-6">Oops! The page you're looking for doesn't exist or has been moved.</p>
+              <Link href="/" className="btn btn-success btn-lg gap-2">
+                <Home className="w-5 h-5" />
+                Back to Home
+              </Link>
             </div>
           </div>
         </div>
