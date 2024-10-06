@@ -39,7 +39,7 @@ export async function GET() {
     try {
         const users = await User.find({});
         return NextResponse.json(users, { status: 200 });
-    } catch (error) {
+    } catch (error:any) {
         return NextResponse.json({ message: error.message }, { status: 500 }); // 500 Internal Server Error
     }
 }
