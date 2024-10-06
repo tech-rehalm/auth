@@ -24,6 +24,8 @@ export default function page() {
                 name, email, password
             })
         })
+        console.log(response);
+        
            if(response.ok){
             toast.success("Account created")
             router.push("/signin")  
